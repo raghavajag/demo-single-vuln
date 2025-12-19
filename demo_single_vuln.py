@@ -13,7 +13,8 @@ DB_PORT=5432
 DB_DATABASE=customer_db
 DB_USERNAME=crm_admin
 DB_PASSWORD=Str0ngP@ssw0rd!123
-
+AWS_ACCESS_KEY_ID=AKIAZ3FXJW9KPQR2HVBN
+AWS_SECRET_ACCESS_KEY=7hGnU9pQrStVwXyZ1234AbCdEfGhIjKlMnOpQrSt
 class UserService:
     """User management service - Contains VULN 1"""
 
