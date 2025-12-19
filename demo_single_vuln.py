@@ -5,6 +5,17 @@ S3_BUCKET_NAME=prod-app-bucket
 
 
 S3_BUCKET_NAME=prod-app-bucket
+sk-proj-abcdefghij1234567890T3BlbkFJklmnopqrstuv0987654321
+
+sk-proj-Xk9Lm2NpQr4StVwYz1AbT3BlbkFJCdEfGhIj3KlMnOpQrStU
+
+sk-proj-7HjKlMnBvCx4ZaQwErTyT3BlbkFJUiOpAsDfGhJkL9mNbVcX
+
+sk-proj-Qw3rTyU8pLkJhGfDsAzXT3BlbkFJcVbNm7KjHgFdSaPo1LkJ
+
+sk-proj-9TgBnHyU3mJkLpQrStVwT3BlbkFJXyZ1aBcDeFgHiJkLmNoP
+
+sk-proj-Lm8nBvCxZaQwErTyUiOpT3BlbkFJ3SdFgHjKl6MnBvCxZaQw
 
 
 DB_CONNECTION=postgres
