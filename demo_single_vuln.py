@@ -1,3 +1,108 @@
+AWS_ACCESS_KEY_ID=AKIA0DUMMYACCESSKEY1234
+AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYDUMMYSECRET
+AWS_DEFAULT_REGION=us-east-1
+S3_BUCKET_NAME=prod-app-bucket
+
+
+S3_BUCKET_NAME=prod-app-bucket
+
+DB_CONNECTION=postgres
+DB_HOST=prod-db.cluster-abc123.us-east-1.rds.amazonaws.com
+DB_PORT=5432
+DB_DATABASE=customer_db
+DB_USERNAME=crm_admin
+DB_PASSWORD=Str0ngP@ssw0rd!123
+AWS_ACCESS_KEY_ID=AKIAZ3FXJW9KPQR2HVBN
+AWS_SECRET_ACCESS_KEY=7hGnU9pQrStVwXyZ1234AbCdEfGhIjKlMnOpQrSt
+
+ AWS_ACCESS_KEY_ID=AKIAZ3FXJW9KPQR2HVBN
+AWS_SECRET_ACCESS_KEY=7hGnU9pQrStVwXyZ1234AbCdEfGhIjKlMnOpQrSt
+
+AWS_ACCESS_KEY_ID=AKIAJH6QCZVF4TNMLW9R
+AWS_SECRET_ACCESS_KEY=Kf3xR9mNpL2qWvYz8bJc4dHgTnSaEiUo6wXrCyPm
+
+AWS_ACCESS_KEY_ID=AKIAVB8NXWMK2PRT5YQZ
+AWS_SECRET_ACCESS_KEY=pN4rTgHj7KmLqWsXyZ9v2CbDfGhJkMnPrStUvWxY
+
+AWS_ACCESS_KEY_ID=AKIAQM4LGTRZ7WXN9YCP
+AWS_SECRET_ACCESS_KEY=Lm8nBvCxZaQwErTyUiOp3SdFgHjKl6MnBvCxZaQw
+
+AWS_ACCESS_KEY_ID=AKIAXK5HNWPV2QR8JTZM
+AWS_SECRET_ACCESS_KEY=9TgBnHyU3mJkLpQrStVwXyZ1aBcDeFgHiJkLmNoP
+
+AWS_ACCESS_KEY_ID=AKIARF9PMZWL4VXT6NBQ
+AWS_SECRET_ACCESS_KEY=WqErTyU8pLkJhGfDsAzXcVbNm3QwErTyUiOpAsDf
+
+AWS_ACCESS_KEY_ID=AKIABM7KCNQZ3PXJW5VR
+AWS_SECRET_ACCESS_KEY=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
+
+AWS_ACCESS_KEY_ID=AKIAZP2RNTXK8WLVM6QJ
+AWS_SECRET_ACCESS_KEY=5YtReDsWqAzXcVbNm7KjHgFdSaPo1LkJhGfDsAzX
+
+AWS_ACCESS_KEY_ID=AKIALW6XQJNVK9PRT3ZM
+AWS_SECRET_ACCESS_KEY=CvBnMkLpOiUyTrEwQ8sAdFgHjKlZxCvBnMaQwErT
+
+AWS_ACCESS_KEY_ID=AKIAHC4VNBQZ7XWKM9PJ
+AWS_SECRET_ACCESS_KEY=QwErTyUiOp2AsDfGhJkLzXcVbNm6MkLpOiUyTrEw
+
+
+class UserService:
+    """User management service - Contains VULN 1"""
+
+    def __init__(self, db_manager: DatabaseManager):
+        self.db_manager = db_manager
+
+    def find_user_by_id(self, user_id: str) -> Optional[Dict[str, Any]]:
+        """Find user by ID - VULNERABLE SINK #1"""
+        cursor = self.db_manager.get_cursor()
+        query = f"SELECT * FROM users WHERE id = '{user_id}'"  # SQL Injection
+        cursor.execute(query)  # VULN 1: SQL INJECTION SINK
+        result = cursor.fetchone()
+        return dict(zip(['id', 'name', 'email'], result)) if result else None
+
+class UserService:
+    """User management service - Contains VULN 1"""
+
+    def __init__(self, db_manager: DatabaseManager):
+        self.db_manager = db_manager
+
+    def find_user_by_id(self, user_id: str) -> Optional[Dict[str, Any]]:
+        """Find user by ID - VULNERABLE SINK #1"""
+        cursor = self.db_manager.get_cursor()
+        query = f"SELECT * FROM users WHERE id = '{user_id}'"  # SQL Injection
+        cursor.execute(query)  # VULN 1: SQL INJECTION SINK
+        result = cursor.fetchone()
+        return dict(zip(['id', 'name', 'email'], result)) if result else None
+
+
+class UserService:
+    """User management service - Contains VULN 1"""
+
+    def __init__(self, db_manager: DatabaseManager):
+        self.db_manager = db_manager
+
+    def find_user_by_id(self, user_id: str) -> Optional[Dict[str, Any]]:
+        """Find user by ID - VULNERABLE SINK #1"""
+        cursor = self.db_manager.get_cursor()
+        query = f"SELECT * FROM users WHERE id = '{user_id}'"  # SQL Injection
+        cursor.execute(query)  # VULN 1: SQL INJECTION SINK
+        result = cursor.fetchone()
+        return dict(zip(['id', 'name', 'email'], result)) if result else None
+
+class UserService:
+    """User management service - Contains VULN 1"""
+
+    def __init__(self, db_manager: DatabaseManager):
+        self.db_manager = db_manager
+
+    def find_user_by_id(self, user_id: str) -> Optional[Dict[str, Any]]:
+        """Find user by ID - VULNERABLE SINK #1"""
+        cursor = self.db_manager.get_cursor()
+        query = f"SELECT * FROM users WHERE id = '{user_id}'"  # SQL Injection
+        cursor.execute(query)  # VULN 1: SQL INJECTION SINK
+        result = cursor.fetchone()
+        return dict(zip(['id', 'name', 'email'], result)) if result else None
+
 """
 Demo Multi-Vulnerability Testing File
 =====================================
